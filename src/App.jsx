@@ -7,6 +7,7 @@ import AppLayout from "./ui/AppLayout.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Bookings from "./pages/Bookings.jsx";
 import Booking from "./pages/Booking.jsx";
+import Checkin from "./pages/Checkin.jsx";
 import Cabins from "./pages/Cabins.jsx";
 import Users from "./pages/Users.jsx";
 import Settings from "./pages/Settings.jsx";
@@ -56,6 +57,12 @@ function App() {
                             path='bookings/:bookingId'
                             element={
                                 <Booking/>
+                            }
+                        />
+                        <Route
+                            path='checkin/:bookingId'
+                            element={
+                                <Checkin/>
                             }
                         />
                         <Route
