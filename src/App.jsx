@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import AppLayout from "./ui/AppLayout.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Bookings from "./pages/Bookings.jsx";
+import Booking from "./pages/Booking.jsx";
 import Cabins from "./pages/Cabins.jsx";
 import Users from "./pages/Users.jsx";
 import Settings from "./pages/Settings.jsx";
@@ -49,6 +50,12 @@ function App() {
                             path='bookings'
                             element={
                                 <Bookings/>
+                            }
+                        />
+                        <Route
+                            path='bookings/:bookingId'
+                            element={
+                                <Booking/>
                             }
                         />
                         <Route
