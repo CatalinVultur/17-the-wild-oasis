@@ -16,6 +16,7 @@ import Login from "./pages/Login.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
 
 import GlobalStyles from "./styles/GlobalStyles.js";
+import ProtectedRoute from "./ui/ProtectedRoute.jsx";
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -34,7 +35,11 @@ function App() {
             <GlobalStyles/>
             <BrowserRouter>
                 <Routes>
-                    <Route element={<AppLayout/>}>
+                    <Route element={
+                        <ProtectedRoute>
+                            <AppLayout/>
+                        </ProtectedRoute>
+                    }>
                         <Route
                             index
                             element={
